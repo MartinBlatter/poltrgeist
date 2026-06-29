@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>poltrgeist — smoke test</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 700px; margin: 80px auto; padding: 0 24px; line-height: 1.6; }
+    h1 { font-size: 2.5rem; }
+    button { padding: 10px 22px; font-size: 1rem; cursor: pointer; border-radius: 6px; border: 2px solid #333; background: #fff; margin: 6px; }
+    ul { line-height: 2; }
+    .controls { margin-top: 32px; border-top: 1px solid #ddd; padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>poltrgeist</h1>
+  <h2>Funny, non-annoying UI effects</h2>
+
+  <p>
+    This page exercises every effect. Buttons explode particles on click, run shy from your cursor,
+    or get yeeted off-screen. Headings wobble. A ghost image drifts in from the edge. A vignette
+    heartbeat pulses. Words occasionally turn eldritch or flip sideways.
+  </p>
+
+  <ul>
+    <li>The quick brown fox jumped over the lazy dog</li>
+    <li>In the beginning was the Word, and the Word was good</li>
+    <li>Things fall apart; the centre cannot hold</li>
+  </ul>
+
+  <div class="controls">
+    <button>Click me</button>
+    <button>Or me</button>
+    <button>I dare you</button>
+    <button data-poltrgeist="explode shy">Both explode &amp; shy</button>
+    <button data-poltrgeist="yeet">Yeet me</button>
+  </div>
+
+  <div class="controls">
+    <label>Label text that can wobble</label>
+    <p>Another paragraph with some words to get Cthulhu-fied or mirrored.</p>
+  </div>
+
+  <script type="module">
+    import { poltrgeist } from 'poltrgeist'
+
+    poltrgeist.haunt({
+      probability: 0.6,
+      interval: { min: 3000, max: 8000 },
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "poltrgeist",
+  "version": "0.1.0",
+  "description": "Funny, non-annoying UI/UX effects for any web page",
+  "keywords": ["ui", "effects", "animation", "fun", "easter-egg"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "vitest": "^2.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "jsdom": "^25.0.0",
+    "@types/jsdom": "^21.0.0",
+    "typescript": "^5.5.0"
+  }
+}
