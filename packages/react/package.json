@@ -1,6 +1,6 @@
 {
-  "name": "@poltrgeist/react",
-  "version": "0.1.0",
+  "name": "poltrgeist-react",
+  "version": "0.1.1",
   "description": "React bindings for poltrgeist",
   "keywords": ["react", "ui", "effects", "animation", "fun"],
   "license": "MIT",

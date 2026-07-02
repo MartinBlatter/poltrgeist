@@ -2,19 +2,12 @@
 
 Funny, non-annoying UI/UX effects for any web page. Buttons explode, elements shy away from your cursor, words go Lovecraftian — but everything stays functional.
 
-## Packages
-
-| Package | Version | Description |
-|---|---|---|
-| [`poltrgeist`](packages/core) | 0.1.0 | Vanilla JS core, zero dependencies |
-| [`poltrgeist-react`](packages/react) | 0.1.0 | React bindings |
+Zero dependencies. ~19 KB ESM.
 
 ## Install
 
 ```bash
 npm install poltrgeist
-# or for React
-npm install poltrgeist poltrgeist-react
 ```
 
 ## Usage
@@ -25,7 +18,7 @@ npm install poltrgeist poltrgeist-react
 import { poltrgeist } from 'poltrgeist'
 
 poltrgeist.haunt({
-  probability: 0.15,       // 0–1 chance per eligible element
+  probability: 0.15,
   effects: ['explode', 'shy', 'wobble'],
   respectReducedMotion: true,
 })
@@ -45,20 +38,6 @@ poltrgeist.apply(document.querySelectorAll('p'), 'wobble')
 
 ```html
 <button data-poltrgeist="explode shy">Click me</button>
-```
-
-### React
-
-```tsx
-import { PoltrgeistProvider } from 'poltrgeist-react'
-
-function App() {
-  return (
-    <PoltrgeistProvider options={{ probability: 0.1 }}>
-      <YourApp />
-    </PoltrgeistProvider>
-  )
-}
 ```
 
 ## Effects
@@ -107,15 +86,6 @@ Attach a single effect to one or more elements.
 ### `poltrgeist.release()`
 
 Detach all effects and stop all timers.
-
-## Development
-
-```bash
-pnpm install
-pnpm build        # build all packages
-pnpm test         # run tests (Vitest + jsdom)
-pnpm dev          # start the Vite example dev server
-```
 
 ## License
 
